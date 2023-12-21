@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+<style>
+  @media screen and (min-width: 767px) {
+  #navbd{
+    float: right;
+  }
+  #redes_sociales{
+      float: right  ;
+    }
+}
+
+<!--AQUI VA LO QUE PROVOCA QUE FUNCIONE EL MULTI NESTING EN LOS DROPDOWNS-->
+.dropdown-menu li {
+position: relative;
+}
+.dropdown-menu .dropdown-submenu {
+display: none;
+position: absolute;
+left: 100%;
+top: -7px;
+}
+.dropdown-menu .dropdown-submenu-left {
+right: 100%;
+left: auto;
+}
+.dropdown-menu > li:hover > .dropdown-submenu {
+display: block;
+}
+  
+</style>
+<body>
+  <!--NAVBAR1-->
+  <nav class="navbar navbar-expand-md bg-info navbar-dark">
+    <div class="container-fluid">
+        <!--Aqui la parte de la izquierda del navbar-->
+        <div>
+        <a class="navbar-brand" href="https://www.iesalvarofalomir.es/">
+            <img src="IMG/logo_correcte.png" alt="logo" style="width: 80px;" class="rounded-pill" data-bs-toggle="tooltip" title="I.E.S Álvaro Falomir" >
+        </a>
+        <a class="navbar-brand" href="https://www.gva.es/va/inicio/presentacion">
+          <img src="IMG/comunitat_valenciana.jpg" alt="logo" style="width: 80px;" class="rounded-pill" data-bs-toggle="tooltip" title="gva.es" >
+        </a>
+        <a class="navbar-brand" href="https://erasmus-plus.ec.europa.eu/es">
+          <img src="IMG/Erasmus_Logo.png" alt="logo" style="width: 90px;" class="rounded-pill" data-bs-toggle="tooltip" title="Erasmus +" >
+        </a>
+        </div>
+        <!--Aqui el boton para cuando se hace pequeña la página-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" title="Redes Sociales">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--Aqui la parte de la derecha del navbar-->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <!--Aqui van los logos de las redes sociales + enlaces-->
+      <div class="container-fluid float-end">
+        <div id="navbd" class="row" style="width: 25%;">
+          <div id="google_translate_element" class="google col-sm-4"></div>
+        <div class="col-sm-8">
+        <a id="redes_sociales" class="navbar-brand" href="https://www.instagram.com/">
+          <img src="IMG/Instagram_icon.png" alt="logo" style="width: 20px;" class="rounded-pill" data-bs-toggle="tooltip" title="Instagram" >
+        </a>
+        <a id="redes_sociales" class="navbar-brand" href="https://www.youtube.com/">
+          <img src="IMG/youtube.png" alt="logo" style="width: 20px;" class="rounded-pill" data-bs-toggle="tooltip" title="Youtube" >
+        </a>
+        </div>
+        <div class="col-sm-12">
+        <a id="redes_sociales" class="navbar-brand" href="https://twitter.com/?lang=es">
+          <img src="IMG/twitter.png" alt="logo" style="width: 20px;" class="rounded-pill" data-bs-toggle="tooltip" title="Twitter" >
+        </a>
+        <a id="redes_sociales" class="navbar-brand" href="https://www.facebook.com/?locale=es_ES">
+          <img src="IMG/facebook.png" alt="logo" style="width: 20px;" class="rounded-pill" data-bs-toggle="tooltip" title="Facebook" >
+        </a>
+        </div>
+        </div>
+        <!--<button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo" style="float: right;">
+          Menú
+        </button>-->
+      </div>
+    </div>
+  </nav>
+    <!--NAVBAR2 Enlaces-->
+    <nav class="navbar navbar-expand-sm bg-light navbar-light justify-content-center sticky-top">    
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="Inicio.html">Inicio</a> <!--ENLACE A Inicio-->
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Tipos</a> <!--ENLACE NULO-->
+              <!--DROPDOWN DENTRO DEL DROPDOWN-->
+              <ul class="dropdown-menu">
+                <!--SUBENLACE 1-->
+                <li>
+                  <a class="dropdown-item" href="#"><!--ENLACE NULO-->
+                    Profesores &raquo;
+                  </a>
+                  <ul class="dropdown-menu dropdown-submenu">
+                    <li>
+                      <a class="dropdown-item" href="Subp/Cursos.html">Cursos</a><!--ENLACE-->
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="Subp/Job_Shadowing.html">Job Shadowing</a><!--ENLACE-->
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="Subp/Estancias_formación_profesores.html">Estancias de Formación</a><!--ENLACE-->
+                    </li>
+                  </ul>
+                </li>
+                <!--SUBENLACE 2-->
+                <li>
+                  <a class="dropdown-item" href="#">
+                    Alumnos &raquo;
+                  </a>
+                  <ul class="dropdown-menu dropdown-submenu">
+                    <li>
+                      <a class="dropdown-item" href="Subp/Cursos.html">Cursos</a><!--ENLACE-->
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="Subp/Estancias_formación_alumnos.html">Estancias de Formación</a><!--ENLACE-->
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="Subp/Estancias_practicas.html">Estancias en prácticas</a><!--ENLACE-->
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Países</a>
+              <!--AQUI VAN LOS ENLACES DEL DESPLEGABLE-->
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Subp/Italia.html">Italia</a></li><!--FALTA ENLACE DE ITALIA-->
+                <li><a class="dropdown-item" href="Subp/Francia.html">Francia</a></li><!--FALTA ENLACE DE FRANCIA-->
+                <li><a class="dropdown-item" href="Subp/Rumania.html">Rumania</a></li><!--FALTA ENLACE DE Rumania-->
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Experiencias.html">Experiencias</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="Prensa.html">Prensa</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="Contacto.html">Contacto</a>
+            </li> 
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    
+    <!--Content-->  
+    <div class="container-flex">
+      <div class="container">
+        <div class="row">
+          <!--EXPERIENCIA 1-->
+          <div class="col-xl-5 mt-3"><!--EXPERIENCIA 1 IMAGEN-->
+            <img class="rounded" src="IMG/Experiencia1.jpg" style="width: 450px;"/>
+         </div>    
+          <div class="col-xl-7 "><!--EXPERIENCIA 1 TEXTO-->
+            <h1>Mi experiencia en Paris</h1>
+            <p>
+              Mi nombre es Sofía y estudiar en París a través del programa Erasmus+ ha sido una de las experiencias más increíbles de mi vida. Como estudiante de Historia del Arte en Barcelona, siempre quise sumergirme en la rica cultura parisina y explorar sus tesoros artísticos.<br><br>
+
+              Al llegar a París, la emoción y el nerviosismo se mezclaban dentro de mí. Instalarme en un pequeño apartamento cerca de la Sorbona fue el primer paso para sumergirme en esta nueva aventura. Al principio, el idioma y adaptarme a la rutina parisina fueron desafíos, pero pronto descubrí la belleza de esa experiencia...<br><br>
+            </p>  
+            <div class="container mt-3">
+              <button type="button" class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#demo">Ver Más</button>
+              <div id="demo" class="collapse m-2">
+                La universidad me ofreció una amplia gama de cursos fascinantes relacionados con el arte y la historia. Conocí a estudiantes de todo el mundo, lo que enriqueció mis perspectivas y me brindó amistades internacionales que sé que durarán toda la vida.<br><br>
+              
+                Los fines de semana eran mi momento para explorar la ciudad. Recorrí lugares emblemáticos como el Museo del Louvre, el Musée d'Orsay, la catedral de Notre-Dame y paseé por los encantadores barrios de Montmartre y Le Marais. La Torre Eiffel iluminada por la noche siempre fue un espectáculo impresionante.<br><br>
+                
+                Descubrir la cultura francesa fue apasionante. Disfruté de la gastronomía, probando croissants y baguettes en las panaderías locales, degustando queso francés y explorando los mercados callejeros. Los cafés parisinos se convirtieron en mi lugar favorito para sumergirme en un buen libro mientras observaba a la gente pasar.<br><br>
+                
+                Una de las experiencias más gratificantes fue el intercambio cultural. Compartir mi cultura española con mis amigos internacionales y aprender sobre las tradiciones francesas fue enriquecedor. Me sumergí en festivales locales y eventos culturales, experimentando la verdadera esencia de la vida parisina.<br><br>
+                
+                Aparte de mis estudios, participé en actividades extracurriculares. Me uní a un grupo de arte donde pude expresar mi creatividad y conocer a otros estudiantes apasionados por el arte. También formé parte de un club de senderismo, explorando los alrededores de París y sus áreas naturales.<br><br>
+                
+                Al regresar a Barcelona al finalizar mi semestre en París, llevé conmigo recuerdos inolvidables, amistades duraderas y una perspectiva renovada del mundo. Esta experiencia no solo amplió mis conocimientos académicos, sino que también me brindó habilidades interculturales y una confianza renovada en mí misma.<br><br>
+                
+                La experiencia en París a través del programa Erasmus+ ha dejado una huella indeleble en mí. Me ha permitido crecer como persona, conocer una ciudad fascinante y crear lazos con personas increíbles de todo el mundo.
+              </div>
+            </div>
+          </div>
+          <!--EXPERIENCIA 2-->
+          <div class="col-xl-5 mt-3"><!--EXPERIENCIA 2 IMAGEN-->
+            <img class="rounded" src="IMG/Experiencia 2.jpg" style="width: 450px;"/>
+         </div>    
+          <div class="col-xl-7 "><!--EXPERIENCIA 2 TEXTO-->
+            <h1>Mi experiencia en Alemania</h1>
+            <p>
+              Hola, soy Martín, y mi experiencia en Alemania gracias al programa Erasmus+ fue inolvidable. Como estudiante de ingeniería informática en Valencia, siempre me atrajo la reputación de Alemania en el campo de la tecnología y la ingeniería. Cuando tuve la oportunidad de estudiar allí durante un semestre, no lo dudé.<br><br>
+
+              Al llegar a Alemania, me sentí emocionado pero también un poco abrumado. La organización alemana y el idioma alemán eran nuevos para mí, pero rápidamente me di cuenta de que esta experiencia sería desafiante y enriquecedora al mismo tiempo...<br><br>
+            </p>  
+            <div class="container mt-3">
+              <button type="button" class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#demo2">Ver Más</button>
+              <div id="demo2" class="collapse m-2">
+                Me hospedé en una residencia estudiantil cerca de la universidad en Berlín, donde pude conocer a otros estudiantes internacionales. La universidad ofrecía una amplia gama de cursos avanzados en mi campo, lo que me permitió sumergirme en el mundo de la ingeniería informática desde una perspectiva diferente.<br><br>
+              
+                Los fines de semana eran mi momento para explorar. Recorrí la historia en cada esquina, visitando monumentos como la Puerta de Brandeburgo, el Muro de Berlín y los museos de la Isla de los Museos. La diversidad cultural de la ciudad me fascinó, desde sus animados mercados hasta sus impresionantes espacios verdes.<br><br>
+                
+                La cultura alemana me cautivó. Disfruté de la precisión y eficiencia alemanas, pero también del lado relajado y acogedor de la vida en Berlín. Experimenté festivales locales, probé la deliciosa comida alemana y participé en actividades al aire libre como senderismo y ciclismo.<br><br>
+                
+                Uno de los aspectos más enriquecedores fue la interacción con personas de todo el mundo. Aprendí mucho al compartir mi cultura española y al mismo tiempo descubrir las tradiciones alemanas. Esta diversidad de pensamientos y perspectivas fue realmente inspiradora.<br><br>
+                
+                Además de mis estudios, me uní a un grupo de debate universitario y a un club de programación. Estas actividades extracurriculares no solo enriquecieron mi experiencia académica, sino que también me permitieron hacer amigos y mejorar mi alemán.<br><br>
+                
+                Al regresar a Valencia al finalizar mi semestre en Alemania, me llevé conmigo recuerdos imborrables, amistades duraderas y una mentalidad más global. La experiencia en Alemania a través de Erasmus+ me abrió los ojos a una nueva cultura, me brindó valiosas conexiones internacionales y me ayudó a crecer como persona y como estudiante de ingeniería informática.<br><br>
+                
+                Esta aventura en Alemania ha dejado una huella profunda en mi vida, permitiéndome apreciar diferentes perspectivas y preparándome mejor para un mundo cada vez más interconectado y diverso.
+              </div>
+            </div>
+          </div>
+          <!--EXPERIENCIA 3-->
+          <div class="col-xl-5 mt-3"><!--EXPERIENCIA 3 IMAGEN-->
+            <img class="rounded" src="IMG/Experiencia 3.jpg" style="width: 450px;"/>
+         </div>    
+          <div class="col-xl-7 "><!--EXPERIENCIA 3 TEXTO-->
+            <h1>Mi experiencia en Irlanda</h1>
+            <p>
+              Hola, soy Ana, y mi aventura en Irlanda gracias al programa Erasmus+ fue simplemente increíble. Siempre he estado fascinada por la cultura irlandesa y estudiar en este país durante un semestre fue una oportunidad que no pude dejar pasar.<br><br>
+
+              Como estudiante de Literatura Comparada en Sevilla, el viaje a Irlanda se convirtió en una oportunidad única para explorar la rica tradición literaria del país y sumergirme en su atmósfera cultural...<br><br>
+            </p>  
+            <div class="container mt-3">
+              <button type="button" class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#demo3">Ver Más</button>
+              <div id="demo3" class="collapse m-2">
+                Al llegar a Irlanda, me encontré con una atmósfera acogedora y un paisaje verde impresionante. Mi alojamiento en una residencia estudiantil en Dublín me permitió conocer a otros estudiantes internacionales y crear lazos que sé que durarán mucho tiempo.<br><br>
+              
+                La universidad en Dublín ofrecía una amplia gama de cursos que complementaban perfectamente mis estudios de literatura. Estudié obras clásicas de autores irlandeses y tuve la oportunidad de profundizar en la rica tradición literaria del país.<br><br>
+                
+                Los fines de semana eran momentos perfectos para explorar. Visité lugares emblemáticos como el Trinity College, donde pude admirar el Libro de Kells, así como el Museo Nacional de Irlanda y la bulliciosa zona de Temple Bar. También me aventuré fuera de Dublín para disfrutar de la belleza natural de los acantilados de Moher y los paisajes de Connemara.<br><br>
+                
+                La cultura irlandesa me cautivó por completo. Disfruté de la música tradicional en los pubs, aprendí sobre la historia del país a través de sus monumentos y participé en festivales locales como el Día de San Patricio, una experiencia que jamás olvidaré.<br><br>
+                
+                Una de las cosas más enriquecedoras fue la interacción con personas de distintas nacionalidades. Compartí mi amor por la cultura española y aprendí sobre las tradiciones irlandesas, creando conexiones significativas con personas de todo el mundo.<br><br>
+                
+                Además de mis estudios, me involucré en un club de lectura y en un grupo de voluntariado local. Estas actividades extracurriculares no solo complementaron mi aprendizaje académico, sino que también me permitieron conocer más profundamente la cultura y la comunidad irlandesa.<br><br>
+                
+                Al regresar a Sevilla al finalizar mi semestre en Irlanda, me llevé conmigo recuerdos maravillosos, amistades valiosas y una apreciación aún más profunda por la literatura y la cultura irlandesas. Esta experiencia en Irlanda a través de Erasmus+ me brindó una perspectiva global y me ayudó a crecer tanto personal como académicamente.<br><br>
+
+                La aventura en Irlanda ha dejado una huella perdurable en mí, enriqueciendo mi comprensión del mundo y dejándome con una mayor apreciación por la diversidad cultural que existe a nuestro alrededor.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <!--FOOTER-->
+    <div class="mt-5 p-4 bg-dark text-white text-center" > <!--style="position: absolute; width: 100%; bottom: 0px;"-->
+      <img class="rounded-pill" src="IMG/logo_correcte.png" style="width: 60px;">
+      <img class="rounded-pill" src="IMG/comunitat_valenciana.jpg" style="width: 60px;">
+      <img class="rounded-pill" src="IMG/Erasmus_footer.jpeg" style="width: 60px;">
+    </div> 
+    <!--SCRIPT-->
+    <script>
+        // Initialize tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+        })
+      </script>
+      <script type="text/javascript">
+        function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'ca,eu,gl,en,fr,it,pt,de', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true}, 'google_translate_element');
+        }
+        </script>
+</body>
+</html>

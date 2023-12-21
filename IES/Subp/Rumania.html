@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+<style>
+  @media screen and (min-width: 767px) {
+  #navbd{
+    float: right;
+  }
+  #redes_sociales{
+      float: right  ;
+    }
+}
+
+<!--AQUI VA LO QUE PROVOCA QUE FUNCIONE EL MULTI NESTING EN LOS DROPDOWNS-->
+.dropdown-menu li {
+position: relative;
+}
+.dropdown-menu .dropdown-submenu {
+display: none;
+position: absolute;
+left: 100%;
+top: -7px;
+}
+.dropdown-menu .dropdown-submenu-left {
+right: 100%;
+left: auto;
+}
+.dropdown-menu > li:hover > .dropdown-submenu {
+display: block;
+}
+  
+</style>
+<body>
+    <!--NAVBAR1-->
+  <nav class="navbar navbar-expand-md bg-info navbar-dark">
+    <div class="container-fluid">
+        <!--Aqui la parte de la izquierda del navbar-->
+        <div>
+        <a class="navbar-brand" href="https://www.iesalvarofalomir.es/">
+            <img src="../IMG/logo_correcte.png" alt="logo" style="width: 80px;" class="rounded-pill" data-bs-toggle="tooltip" title="I.E.S Álvaro Falomir" >
+        </a>
+        <a class="navbar-brand" href="https://www.gva.es/va/inicio/presentacion">
+          <img src="../IMG/comunitat_valenciana.jpg" alt="logo" style="width: 80px;" class="rounded-pill" data-bs-toggle="tooltip" title="gva.es" >
+        </a>
+        <a class="navbar-brand" href="https://erasmus-plus.ec.europa.eu/es">
+          <img src="../IMG/Erasmus_Logo.png" alt="logo" style="width: 90px;" class="rounded-pill" data-bs-toggle="tooltip" title="Erasmus +" >
+        </a>
+        </div>
+        <!--Aqui el boton para cuando se hace pequeña la página-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" title="Redes Sociales">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--Aqui la parte de la derecha del navbar-->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <!--Aqui van los logos de las redes sociales + enlaces-->
+      <div class="container-fluid float-end">
+        <div id="navbd" class="row" style="width: 25%;">
+          <div id="google_translate_element" class="google col-sm-4"></div>
+        <div class="col-sm-8">
+        <a id="redes_sociales" class="navbar-brand" href="https://www.instagram.com/">
+          <img src="../IMG/Instagram_icon.png" alt="logo" style="width: 20px;" class="rounded-pill" data-bs-toggle="tooltip" title="Instagram" >
+        </a>
+        <a id="redes_sociales" class="navbar-brand" href="https://www.youtube.com/">
+          <img src="../IMG/youtube.png" alt="logo" style="width: 20px;" class="rounded-pill" data-bs-toggle="tooltip" title="Youtube" >
+        </a>
+        </div>
+        <div class="col-sm-12">
+        <a id="redes_sociales" class="navbar-brand" href="https://twitter.com/?lang=es">
+          <img src="../IMG/twitter.png" alt="logo" style="width: 20px;" class="rounded-pill" data-bs-toggle="tooltip" title="Twitter" >
+        </a>
+        <a id="redes_sociales" class="navbar-brand" href="https://www.facebook.com/?locale=es_ES">
+          <img src="../IMG/facebook.png" alt="logo" style="width: 20px;" class="rounded-pill" data-bs-toggle="tooltip" title="Facebook" >
+        </a>
+        </div>
+        </div>
+        <!--<button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo" style="float: right;">
+          Menú
+        </button>-->
+      </div>
+    </div>
+  </nav>
+    <!--NAVBAR2 Enlaces-->
+    <nav class="navbar navbar-expand-sm bg-light navbar-light justify-content-center sticky-top">    
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../Inicio.html">Inicio</a> <!--ENLACE A Inicio-->
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Tipos</a> <!--ENLACE NULO-->
+              <!--DROPDOWN DENTRO DEL DROPDOWN-->
+              <ul class="dropdown-menu">
+                <!--SUBENLACE 1-->
+                <li>
+                  <a class="dropdown-item" href="#"><!--ENLACE NULO-->
+                    Profesores &raquo;
+                  </a>
+                  <ul class="dropdown-menu dropdown-submenu">
+                    <li>
+                      <a class="dropdown-item" href="Cursos.html">Cursos</a><!--ENLACE-->
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="Job_Shadowing.html">Job Shadowing</a><!--ENLACE-->
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="Estancias_formación_profesores.html">Estancias de Formación</a><!--ENLACE-->
+                    </li>
+                  </ul>
+                </li>
+                <!--SUBENLACE 2-->
+                <li>
+                  <a class="dropdown-item" href="#">
+                    Alumnos &raquo;
+                  </a>
+                  <ul class="dropdown-menu dropdown-submenu">
+                    <li>
+                      <a class="dropdown-item" href="Cursos.html">Cursos</a><!--ENLACE-->
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="Estancias_formación_alumnos.html">Estancias de Formación</a><!--ENLACE-->
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="Estancias_practicas.html">Estancias en prácticas</a><!--ENLACE-->
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Países</a>
+              <!--AQUI VAN LOS ENLACES DEL DESPLEGABLE-->
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Italia.html">Italia</a></li><!--FALTA ENLACE DE ITALIA-->
+                <li><a class="dropdown-item" href="Francia.html">Francia</a></li><!--FALTA ENLACE DE FRANCIA-->
+                <li><a class="dropdown-item" href="Rumania.html">Rumania</a></li><!--FALTA ENLACE DE Rumania-->
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../Experiencias.html">Experiencias</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="../Prensa.html">Prensa</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="../Contacto.html">Contacto</a>
+            </li> 
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    
+    <!--Content-->  
+    <div class="container-flex">
+      <div class="container">
+        <div class="row mt-3">
+        <img src="../IMG/rumania_bandera.png" class="col-md-1 rounded-circle" style="height: 50px; width: 75px;"/>
+        <h1 class=" col-md-11" style="margin-bottom: 40px;">Rumania</h1>
+        </div>
+        
+        <!--CAROUSEL-->
+        <div id="demo" class="carousel slide" data-bs-ride="carousel" style="width:100%;">
+
+          <!-- Indicators/dots -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+          </div>
+
+          <!-- The slideshow/carousel -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../IMG/Rumania1.jpg" alt="Rumania.jpg" class="d-block w-100" >
+            </div>
+            <div class="carousel-item">
+              <img src="../IMG/Rumania2.jpg" alt="Rumania2.jpg" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+              <img src="../IMG/Rumania3.jpg" alt="Rumania3.jgp" class="d-block w-100">
+            </div>
+          </div>
+
+          <!-- Left and right controls/icons -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+        <div class="row">
+          <h2 class="mt-3 col-md-12">¿Como es Rumania?</h2>
+          <p>Rumania, situada en Europa del Este, es un país con una rica herencia cultural, una belleza natural impresionante y una historia fascinante que la convierte en un destino intrigante para los viajeros que buscan experiencias auténticas.
+          </p>
+          <div class="col-md-4">
+            <h4>Cultura: </h4>
+            <p>La cultura rumana es una fusión de historia, tradición, folclore, arte y naturaleza que ha evolucionado a lo largo del tiempo, y se manifiesta en una identidad única y acogedora que enriquece la vida cotidiana y las experiencias de quienes exploran este fascinante país.<br><br>
+
+              La cultura rumana está impregnada de tradiciones folclóricas, música y danzas regionales. La danza "hora" y la música de cimbalom son elementos esenciales en celebraciones y festividades.<br><br>
+              
+              Rumania tiene una historia rica y compleja que se refleja en sus castillos medievales, iglesias ortodoxas antiguas, ciudades fortificadas y monumentos como el Castillo de Bran, asociado con la leyenda de Drácula.<br><br>
+              
+              La comida rumana es sabrosa y variada. Platos emblemáticos incluyen sarmale (hojas de parra o repollo rellenas), mămăligă (polenta), mici (brochetas de carne) y una amplia gama de sopas y guisos.<br><br>
+              
+              La arquitectura rumana incluye una mezcla de estilos, desde las coloridas casas de madera en Maramureş hasta la arquitectura histórica y belleza de los edificios en ciudades como Sibiu y Brașov.<br><br>
+              
+              Rumania celebra festivales y eventos a lo largo del año, como el Festival de la Cosecha, festivales de música folclórica y celebraciones religiosas como la Pascua y Navidad ortodoxa.<br><br>
+              
+              Los rumanos son conocidos por su hospitalidad y calidez. Las tradiciones incluyen reuniones familiares, el respeto por los mayores y la valoración de las relaciones cercanas.<br><br>
+            
+              La naturaleza deslumbrante de Rumania incluye los montes Cárpatos, el Delta del Danubio, cuevas espectaculares y una gran diversidad de ecosistemas que atraen a los amantes de la naturaleza y el ecoturismo.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h4>Festividades: </h4>
+            <ul>
+              <li>Pascua Ortodoxa: Una de las festividades religiosas más importantes en Rumania. La Pascua se celebra con fervor, incluyendo servicios religiosos, decoración de huevos de Pascua (ouă încondeiate) y la comida tradicional como cordero asado y cozonac (pan dulce).</li>
+              <li class="mt-3">Rusaliile (Espíritus de Pentecostés): Celebración cristiana que se lleva a cabo 50 días después de la Pascua. Incluye tradiciones folclóricas, danzas y festividades, especialmente en áreas rurales.</li>
+              <li class="mt-3">Festival de la Cosecha: En septiembre u octubre, se celebra la cosecha con festivales por todo el país. Estos festivales incluyen bailes folclóricos, música tradicional, concursos y exhibiciones de productos agrícolas.</li>
+              <li class="mt-3">Dragobete: Una festividad romántica celebrada el 24 de febrero, a menudo considerada el "Día de San Valentín" rumano. Se enfoca en el amor y la naturaleza, con costumbres tradicionales y rituales de fertilidad.</li>
+              <li class="mt-3">Martisor: Celebrado el 1 de marzo, marca el inicio de la primavera. La gente intercambia pequeñas decoraciones en forma de broches rojos y blancos (martisor) como símbolo de buena suerte y renacimiento.</li>
+              <li class="mt-3">Ziua Națională a României (Día Nacional de Rumania): Celebrado el 1 de diciembre, conmemora la unificación de Rumania en 1918. Hay desfiles, eventos culturales y ceremonias por todo el país.</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h4>Sistema educativo: </h4>
+            <p>El sistema educativo de Rumania está estructurado en varios niveles y se basa en la educación obligatoria y gratuita para los niños. Su sistema educativo esta dividido en :<br><br>
+
+              Educación Preescolar (Grădiniță): La educación preescolar no es obligatoria, pero es común para niños de 3 a 6 años. Se enfoca en el desarrollo social, emocional y cognitivo a través de actividades lúdicas y educativas.<br><br>
+          
+              Educación Primaria (Școală Primară): La educación primaria es obligatoria para niños de 6 a 10 años y dura cuatro años. Incluye materias como matemáticas, lengua rumana, ciencias sociales y naturales, y educación física.<br><br>
+          
+              Educación Secundaria (Gimnaziu): Comprende cuatro años de educación secundaria inferior para estudiantes de 11 a 14 años. El plan de estudios se amplía para incluir asignaturas adicionales y una mayor profundidad en los temas académicos.<br><br>
+          
+              Educación Secundaria Superior (Liceu): Ofrece educación secundaria superior para estudiantes de 15 a 18 años. Los estudiantes pueden optar por programas académicos generales o programas técnicos y profesionales especializados.<br><br>
+              Examen de Graduación (Bacalaureat): Al finalizar la educación secundaria superior, los estudiantes deben aprobar el examen nacional de graduación, el "Bacalaureat", para obtener el diploma que les permite acceder a la educación superior.<br><br>
+              Educación Superior: Rumania cuenta con universidades públicas y privadas que ofrecen una amplia gama de programas de grado y posgrado. Las universidades están especializadas en diversos campos académicos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+
+
+
+    <!--FOOTER-->
+    <div class="mt-5 p-4 bg-dark text-white text-center" > <!--style="position: absolute; width: 100%; bottom: 0px;"-->
+      <img class="rounded-pill" src="../IMG/logo_correcte.png" style="width: 60px;">
+      <img class="rounded-pill" src="../IMG/comunitat_valenciana.jpg" style="width: 60px;">
+      <img class="rounded-pill" src="../IMG/Erasmus_footer.jpeg" style="width: 60px;">
+    </div> 
+    <!--SCRIPT-->
+    <script>
+        // Initialize tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+        })
+      </script>
+      <script type="text/javascript">
+        function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'ca,eu,gl,en,fr,it,pt,de', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true}, 'google_translate_element');
+        }
+        </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+body body {
+  background-color: rgb(173, 216, 230);
+  color: rgb(250, 0, 62);
+  font-size: 20px;
+}
+body div {
+  background-color: rgb(250, 0, 62);
+  width: 10cm;
+  height: 20cm;
+  color: blue;
+}
+body div ul, body div ol {
+  font-size: 20px;
+}
+body div ol {
+  list-style: none;
+}/*# sourceMappingURL=style.css.map */

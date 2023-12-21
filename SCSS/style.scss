@@ -1,0 +1,33 @@
+$color-letra: rgb(250, 0, 62);
+$color-fondo:  rgb(173, 216, 230);
+$anchura: 10cm;
+$altura: 20cm;
+$tamaño-letra: 20px;
+$tamaño-letra-pequeña:13px;
+@import "style_import";
+
+@mixin nose{
+    body{
+        background-color: $color-fondo;
+        color: $color-letra;
+        font-size: $tamaño-letra;
+    }
+    
+    div{
+        background-color: $color-letra;
+        width: $anchura;
+        height: $altura;
+        color: $importado;
+        ul{
+            font-size: $tamaño-letra;
+        }
+    
+        ol{
+            @extend ul;
+            list-style: none;
+        }
+    }
+}
+body{
+    @include nose;
+}

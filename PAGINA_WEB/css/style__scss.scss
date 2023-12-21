@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Calistoga|Roboto:400,700&display=swap');
+@import 'variables'; //IMPORTA LAS VARIABLES Y MIXINS DECLARADAS EN EL OTRO ARCHIVO SCSS
+
+body{ //LE DECLARA EL TIPO DE FUENTE Y LOS VALORES DEL MARGEN, ANCHURA Y ALTURA AL CUERPO
+    font: map-get($font-weights,"regular") $font-size $font-family-cuerpo;
+    margin: 0 auto;
+    max-width: $max-width;
+    min-width: $min-width;
+}
+
+@include fuente-titulos; //INCLUYE EL MIXIN fuente-titulos DEL FICHERO SCSS QUE DA FORMATO A LAS LETRAS HEADING (TITULOS)
+
+header{ //LE DA FORMATO AL HEADER Y A LAS IMAGENES Y DIV'S QUE ESTAN DENTRO DE DICHO HEADER (NESTING)
+    background-color: map-get($colores,'header');
+    padding: 1rem;
+    display: flex;
+    img{
+        height: 8rem;
+    }
+    div{
+        text-align: center;
+        width: 90%;
+        color: map-get($colores,'destacado');
+        padding: 1rem 0 0 0;
+    }
+}
+
+nav ul{     //LE DA FORMATO A LOS ELEMENTOS UL DENTRO DE DEL NAV, INCLUYENDOLES UN MIXIN QUE LE DA FORMATO A LA LISTA Y TAMBIÉN LE APLICA FORMATO A LOS LI DENTRO DE LA LISTA Y A LOS ENLACES DENTRO DE LOS DICHOS LI
+    @include ul-horizontal;
+    margin: 0.5rem 0 0 0;
+    text-align: center;
+    justify-content: space-between;
+    li{
+        background-color: map-get($colores,'nav');
+        width: 12%;
+        padding: 1rem 0;
+        a{
+            color: map-get($colores,'enlace');
+            text-decoration: none;
+            &:hover{
+                font-weight:  map-get($font-weights,"bold")
+            }
+        }
+    }
+}
+
+div.contenedor{ //DISPONE EL CONTENEDOR EN FLEXIBLE PARA SER ALGO RESPONSIVE
+    display: flex;
+}
+
+section{  //LE DA FORMATO A EL APARTADO SECTION Y SUS ARTICLES (QUE DENTRO TAMBIEN LE DA FORMATO A LAS IMG,DIV Y P DE ARTICLES PETENECIENTES A SECTION)
+    background-color: map-get($colores,'section');
+    width: 69%;
+    margin: 0.5rem 1% 0 0;
+    padding: 1% 1% 0 1%;
+    article{
+        margin: 0 0 0.5rem 0;
+        background-color: map-get($colores,'article');
+        padding: 1rem;
+        img{
+            height: 7rem;
+            float: left;
+        }
+        div{
+            text-align: center;
+            height: 7rem;
+            h3{
+                margin: $margin-default;
+                padding-top: 2.5rem;
+            }
+            h4{
+                margin: $margin-default;
+            }
+        }
+        p{
+            margin: 1rem 0 0 0;
+        }
+    }
+}
+
+aside{ //LE DA FORMATO Y COLOR AL APARTADO ASIDE 
+    background-color: map-get($colores,'aside');
+    width: 26%;
+    padding: 1%;
+    margin: 0.5rem 0 0 0;
+}
+
+footer{ //LE DA FORMATO Y COLOR AL APARTADO FOOTER
+    margin: 0.5rem 0 0 0;
+    padding: 0.5rem;
+    background-color: map-get($colores,'footer');
+    color: map-get($colores,'destacado');
+    text-align: center;
+}
+
+/*COMENTARIO EXPLICATIVO DE LAS VARIABLES SCSS (TODO LO QUE LLEVA '' HACE REFERENCIA A VARIABLES DECLARADAS DENTRO DEL ARCHIVO 
+_VARIABLES.SCSS) $COLORES,'FOOTER' hace referencia a el valor de la varaible $colores en la parte de footer declarada en el otro archivo  rgba(150, 34, 30, 0.42),*/
